@@ -13,12 +13,15 @@
   <body>
     <header>
       <div class="about-me">
-        <picture>
-          <source srcset="./assets/images/portrait-small.webp" media="(width <= 600px)">
-          <source srcset="./assets/images/portrait-medium.webp" media="(width <= 1200px)">
-          <source srcset="./assets/images/portrait.webp" media="(width > 1200px)">
-          <img src="./assets/images/portrait.jpg" alt="">
-        </picture>
+        <figure>
+          <picture>
+            <source srcset="./assets/images/portrait-small.webp" media="(width <= 600px)">
+            <source srcset="./assets/images/portrait-medium.webp" media="(width <= 1200px)">
+            <source srcset="./assets/images/portrait.webp" media="(width > 1200px)">
+            <img src="./assets/images/portrait.jpg" alt="">
+          </picture>
+          <figcaption>Richard Jackson</figcaption>
+        </figure>
         <div class="text-container">
           <h3 class="section-title">About me</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -29,8 +32,8 @@
             Aldus PageMaker including versions of Lorem Ipsum</p>
           <div class="links-container">
             <i class="devicon-github-original"></i>
-            <i class="devicon-twitter-original"></i>
             <i class="devicon-linkedin-plain"></i>
+            <i class="devicon-twitter-original"></i>
           </div>
         </div>
       </div>

@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* border: 1px dashed; */
+}
+
+header::before {
+  content: "";
+  background-color: indigo;
+  transform: skewY(-10deg) translateY(0px);
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px 1px #0008;
+}
+
+header::after {
+  content: "";
+  background-color: indigo;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+
+}
+
+p {
+  line-height: 1.5;
+}
+
+header {
+  min-height: 600px;
+  display: grid;
+}
+
+header .about-me {
+  display: flex;
+  width: 80%;
+  place-self: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+header .about-me h3 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+header .about-me figure {
+  height: 300px;
+  box-shadow: 0 0 20px 1px #0008;
+  text-align: center;
+}
+
+header .about-me figure img {
+  height: 100%;
+  width: 100%;
+  transform: scale(1.5) translateX(-30px);
+}
+
+header .about-me figure figcaption {
+  color: white;
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+  transform: translateX(-2rem);
+}
+
+header .about-me .text-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 2rem;
+  width: 700px;
+  box-shadow: 0 0 20px 1px #0008;
+}
+
+header .about-me .text-container .links-container {
+  display: flex;
+  justify-content: end;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
