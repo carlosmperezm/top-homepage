@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  /* border: 1px dashed; */
+  padding: 0;
+  /* outline: 1px dashed; */
 }
 
 img {
@@ -9,77 +10,67 @@ img {
   height: 100%;
 }
 
+p {
+  line-height: 1.5;
+}
+
 header::before {
   content: "";
   background-color: indigo;
-  transform: skewY(-10deg) translateY(0px);
+  transform: skewY(-10deg) translateY(-200px);
   width: 100%;
-  height: 400px;
+  height: 500px;
   position: absolute;
   z-index: -1;
   box-shadow: 0 0 20px 1px #0008;
 }
 
-header::after {
-  content: "";
-  background-color: indigo;
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-
-}
-
-p {
-  line-height: 1.5;
-}
-
 header {
   min-height: 600px;
+  width: 100%;
   display: grid;
+  place-content: center;
 }
 
 header .about-me {
-  display: flex;
   width: 80%;
+  min-height: 400px;
   place-self: center;
-  gap: 1rem;
-  justify-content: center;
+  background-color: white;
+  margin: 1rem;
+  transform: translateX(40px);
 }
 
 header .about-me h3 {
   font-size: 2rem;
   font-weight: 200;
+  margin-bottom: 1rem;
 }
 
 header .about-me figure {
   height: 300px;
   box-shadow: 0 0 20px 1px #0008;
-  text-align: center;
-}
-
-header .about-me figure img {
-  transform: scale(1.5) translateX(-30px);
+  float: left;
+  transform-origin: right;
+  transform: scale(1.4);
+  margin: 1rem;
+  position: relative;
 }
 
 header .about-me figure figcaption {
-  color: white;
-  font-size: 3rem;
-  position: relative;
+  font-size: 2rem;
+  position: absolute;
   z-index: 1;
-  transform: translateX(-2rem);
+  bottom: 0;
+  color: white;
+  transform: translateX(20px);
 }
 
 header .about-me .text-container {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 1rem;
   padding: 2rem;
-  width: 700px;
   box-shadow: 0 0 20px 1px #0008;
+
 }
 
 header .about-me .text-container .links-container {
@@ -87,9 +78,9 @@ header .about-me .text-container .links-container {
   justify-content: end;
   font-size: 1.5rem;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
-/* TODO: Make the header responsibe */
 
 main {
   padding: 1rem;
@@ -104,13 +95,16 @@ main .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
   grid-template-rows: repeat(auto-fill, 400px);
+  place-content: center;
   gap: 2rem;
+  background-color: purple;
 }
 
 main .projects-container .project {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 20px 1px #0008;
+  width: 300px;
 }
 
 main .projects-container .project .description-container {
@@ -134,16 +128,14 @@ main .projects-container .project .title-container .links-container {
   gap: 1rem;
 }
 
-@media screen and (width<=600px) {
-  /* TODO: Add mobile responsiness */
-}
 
 footer {
   background-color: indigo;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-around;
-  padding: 2rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
 }
 
 footer h3 {
@@ -156,12 +148,14 @@ footer .text-container {
   gap: 1rem;
   padding: 1rem;
   color: white;
+  min-width: 100px;
 }
 
 footer .phone-number,
 footer .email {
-  display: flex;
   gap: 1rem;
+  display: flex;
+  align-items: center
 }
 
 footer .icon {
@@ -177,4 +171,89 @@ footer .text-container .links-container {
 footer .img-container {
   max-width: 700px;
   max-height: 400px;
+}
+
+/* Tablets */
+@media (max-width:1000px) {
+  header .about-me {
+    transform: translate(0, 30px);
+  }
+
+  header .about-me h3 {
+    text-align: center;
+
+  }
+
+  header .about-me figure {
+    transform: scale(1.2);
+    transform-origin: bottom right;
+  }
+
+  header .about-me figure figcaption {
+    top: 0;
+    transform: translateX(100%);
+  }
+
+  header .about-me .text-container .links-container {
+    display: none;
+  }
+
+}
+
+/* Mobile */
+@media (max-width:600px) {
+  header {
+    min-width: 100%
+  }
+
+  header .about-me {
+    place-self: center;
+    background: none;
+  }
+
+  header .about-me figure {
+    float: none;
+    place-self: center;
+    width: 100%;
+    transform: none;
+  }
+
+  header .about-me figure figcaption {
+    top: auto;
+    bottom: 0;
+    transform: translate(45%, 0px);
+  }
+
+  header .about-me .text-container {
+    box-shadow: none;
+  }
+
+  header .about-me .text-container .links-container {
+    display: flex;
+    place-self: center;
+    color: black;
+  }
+
+
+
+  main .projects-container {
+    grid-template-columns: repeat(auto-fill, 1fr);
+    background-color: red;
+  }
+
+  main .projects-container .project {
+    width: 100vw;
+  }
+
+  footer {
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+
+  footer .text-container .links-container,
+  footer .text-container h3 {
+    place-self: center;
+  }
+
 }

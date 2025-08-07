@@ -14,12 +14,12 @@
     <header>
       <div class="about-me">
         <figure>
-          <picture>
-            <source srcset="./assets/images/portrait-small.webp" media="(width <= 600px)">
-            <source srcset="./assets/images/portrait-medium.webp" media="(width <= 1200px)">
-            <source srcset="./assets/images/portrait.webp" media="(width > 1200px)">
-            <img src="./assets/images/portrait.jpg" alt="">
-          </picture>
+          <!-- <picture> -->
+          <!-- <source srcset="./assets/images/portrait-small.webp" media="(width <= 600px)"> -->
+          <!-- <source srcset="./assets/images/portrait-medium.webp" media="(width <= 1200px)"> -->
+          <!-- <source srcset="./assets/images/portrait.webp" media="(width > 1200px)"> -->
+          <img src="./assets/images/portrait.jpg" alt="">
+          <!-- </picture> -->
           <figcaption>Richard Jackson</figcaption>
         </figure>
         <div class="text-container">
@@ -159,7 +159,12 @@
         </div>
       </div>
       <div class="img-container">
-        <img src="./assets/images/portrait.jpg" alt="">
+        <picture>
+          <source srcset="./assets/images/portrait.webp" media="(width > 1200px)">
+          <source srcset="./assets/images/portrait-medium.webp" media="(width <= 1200px)">
+          <source srcset="./assets/images/portrait-small.webp" media="(width <= 600px)">
+          <img src="./assets/images/portrait.jpg" alt="">
+        </picture>
       </div>
     </footer>
   </body>
