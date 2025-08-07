@@ -137,3 +137,44 @@ main .projects-container .project .title-container .links-container {
 @media screen and (width<=600px) {
   /* TODO: Add mobile responsiness */
 }
+
+footer {
+  background-color: indigo;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+footer h3 {
+  font-size: 2rem;
+}
+
+footer .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  color: white;
+}
+
+footer .phone-number,
+footer .email {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .icon {
+  width: 30px;
+}
+
+footer .text-container .links-container {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+footer .img-container {
+  max-width: 700px;
+  max-height: 400px;
+}
