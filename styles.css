@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 1px dashed; */
 }
 
 img {
@@ -83,7 +82,6 @@ header .about-me .text-container .links-container {
 
 
 main {
-  /* padding: 1rem; */
   padding: 2rem;
 }
 
@@ -97,7 +95,6 @@ main .projects-container {
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
   gap: 2rem;
-  /* background-color: purple; */
 }
 
 main .projects-container .project {
@@ -131,12 +128,14 @@ main .projects-container .project .title-container .links-container {
 
 
 footer {
+  margin-top: 5rem;
   background-color: indigo;
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: space-around;
   padding-bottom: 2rem;
   gap: 1rem;
+  padding: 2rem;
 }
 
 footer h3 {
@@ -150,6 +149,7 @@ footer .text-container {
   padding: 1rem;
   color: white;
   min-width: 100px;
+  margin: 1rem;
 }
 
 footer .phone-number,
@@ -204,6 +204,10 @@ footer .img-container {
 
   }
 
+  footer .img-container {
+    width: 400px;
+  }
+
 }
 
 /* Mobile */
@@ -256,12 +260,20 @@ footer .img-container {
 
   footer {
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
+    padding: 0;
   }
 
   footer .text-container .links-container,
   footer .text-container h3 {
+    place-self: center;
+  }
+
+  footer .icon {
+    display: none;
+  }
+
+  footer .img-container {
+    width: 100%;
     place-self: center;
   }
 
