@@ -83,6 +83,7 @@ header .about-me .text-container .links-container {
 
 main {
   padding: 2rem;
+  margin-top: 2rem;
 }
 
 main h3 {
@@ -242,6 +243,9 @@ footer .img-container {
     color: black;
   }
 
+  main {
+    margin-top: 8rem;
+  }
 
   main h3 {
     text-align: center;
