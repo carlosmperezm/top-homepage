@@ -26,7 +26,6 @@ header::before {
 
 header {
   min-height: 600px;
-  width: 100%;
   display: grid;
   place-content: center;
 }
@@ -54,6 +53,7 @@ header .about-me figure {
   transform: scale(1.4);
   margin: 1rem;
   position: relative;
+  max-width: 300px;
 }
 
 header .about-me figure figcaption {
