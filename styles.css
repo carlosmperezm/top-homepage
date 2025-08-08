@@ -92,7 +92,7 @@ main h3 {
 main .projects-container {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   place-items: center;
   gap: 2rem;
 }
@@ -101,7 +101,6 @@ main .projects-container .project {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 20px 1px #0008;
-  max-width: 300px;
   height: 400px;
 }
 
@@ -131,7 +130,6 @@ footer {
   margin-top: 5rem;
   background-color: indigo;
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-around;
   padding-bottom: 2rem;
   gap: 1rem;
@@ -200,7 +198,7 @@ footer .img-container {
   }
 
   main .projects-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
 
   }
 
@@ -251,7 +249,6 @@ footer .img-container {
 
   main .projects-container {
     grid-template-columns: auto;
-    /* background-color: red; */
   }
 
   main .projects-container .project {
