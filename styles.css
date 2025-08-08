@@ -234,7 +234,7 @@ footer .img-container {
   header .about-me figure figcaption {
     top: auto;
     bottom: 0;
-    transform: translate(45%, 0px);
+    transform: translate(30%, 0px);
   }
 
   header .about-me .text-container {
