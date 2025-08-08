@@ -83,7 +83,8 @@ header .about-me .text-container .links-container {
 
 
 main {
-  padding: 1rem;
+  /* padding: 1rem; */
+  padding: 2rem;
 }
 
 main h3 {
@@ -93,18 +94,18 @@ main h3 {
 main .projects-container {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-template-rows: repeat(auto-fill, 400px);
-  place-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
   gap: 2rem;
-  background-color: purple;
+  /* background-color: purple; */
 }
 
 main .projects-container .project {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 20px 1px #0008;
-  width: 300px;
+  max-width: 300px;
+  height: 400px;
 }
 
 main .projects-container .project .description-container {
@@ -169,7 +170,7 @@ footer .text-container .links-container {
 }
 
 footer .img-container {
-  max-width: 700px;
+  max-width: 600px;
   max-height: 400px;
 }
 
@@ -196,6 +197,11 @@ footer .img-container {
 
   header .about-me .text-container .links-container {
     display: none;
+  }
+
+  main .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+
   }
 
 }
@@ -235,14 +241,17 @@ footer .img-container {
   }
 
 
+  main h3 {
+    text-align: center;
+  }
 
   main .projects-container {
-    grid-template-columns: repeat(auto-fill, 1fr);
-    background-color: red;
+    grid-template-columns: auto;
+    /* background-color: red; */
   }
 
   main .projects-container .project {
-    width: 100vw;
+    max-width: 100%;
   }
 
   footer {
